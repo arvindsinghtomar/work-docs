@@ -18,3 +18,5 @@ Use Case when a user tries to get authorization for any resource:
 > We can figure out another security mechanism if we find any better way
 > of securing the APIs.
 
+###Data design
+![Alt text](images/datadesign.png "Data Design")
