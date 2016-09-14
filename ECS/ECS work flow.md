@@ -33,7 +33,7 @@ Users:
   - PUT : user/forget-password #Updates a user password after verification
   - GET : user/badges #Retrives list of valid badges assigned to currently logged in user
   - GET : user/badges/id #Retrives a badge information assigned to currently logged in user
-  - 
+
 Issuers:
   - POST : issuers #Creates a new issuer
   - GET : issuers #Retrives issuers list for admin
