@@ -20,3 +20,29 @@ Use Case when a user tries to get authorization for any resource:
 
 ###Data design
 ![Alt text](images/datadesign.png "Data Design")
+
+
+###APIs
+
+Users:
+  - POST : users #Creates a new user
+  - GET : users #Retrives users list for admin
+  - GET : user #Retrives currently logged in user
+  - PUT : user #Updates currently logged in user
+  - POST : user/forget-password #Request an account recovery method (email or sms)
+  - PUT : user/forget-password #Updates a user password after verification
+  - GET : user/badges #Retrives list of valid badges assigned to currently logged in user
+  - GET : user/badges/id #Retrives a badge information assigned to currently logged in user
+  - 
+Issuers:
+  - POST : issuers #Creates a new issuer
+  - GET : issuers #Retrives issuers list for admin
+  - GET : issuer #Retrives currently logged in issuer
+  - PUT : issuer #Updates currently logged in issuer
+  - GET : issuer/badge-requests #Retrives list of badge request for an issuer
+  - GET : issuer/badge-issued #Retrives list of badge issued by an issuer
+  
+Badges:
+  - POST : badges #Creates a new badge
+  - GET : badges #Retrives badges list for admin and users
+  - PUT : badges #Updates a badge according to id
