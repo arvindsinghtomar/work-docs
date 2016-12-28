@@ -17,12 +17,15 @@ Add this two properties in the app/res/values/idp_configs_optional.xml file
 <string name="dynamic_registration_endpoint" translatable="false">https://example.gluu.org/oxauth/seam/resource/restv1/oxauth/register</string>
 ```
 
+---
+
 Do the following changes in app/java/net.openid.appauthdemo/IdentityProvider.java
 
     - Change <R.string.google_discovery_uri> to <R.string.gluu_discovery_uri>
     - Change <NOT_SPECIFIED>, // dynamic registration not supported to <R.string.dynamic_registration_endpoint>
     - Change the <R.string.google_client_id> to <NOT_SPECIFID> for dynamic registration
 
+---
 
 We need to add header in library in request in the method RegistrationRequestTask in the file called AuthorizationService.java
 Path to the file is /library/java/net/openid/appauth/AuthorizationService.java.
@@ -31,6 +34,8 @@ Path to the file is /library/java/net/openid/appauth/AuthorizationService.java.
 conn.setRequestProperty("Content-Type", "application/json");
 ```
 This line can be added on line number 453.
+
+---
 
 And also change the manifest file and change the activity tag to
 
@@ -46,3 +51,5 @@ And also change the manifest file and change the activity tag to
     </intent-filter>
 </activity>
 ```
+
+So that all the URIs that matches "example.gluu.org" are opened in the app itself
